@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Bags Store</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f8f8f8; color: #222; }
+    header { background: #111; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 28px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    .hero { background: url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1400&q=80') center/cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+    .hero div { background: rgba(0,0,0,0.5); padding: 30px; border-radius: 10px; }
+    .hero h2 { font-size: 42px; margin-bottom: 10px; }
+    .hero button { padding: 12px 25px; background: gold; border: none; cursor: pointer; font-size: 16px; }
+    .products { padding: 40px 20px; }
+    .products h2 { text-align: center; margin-bottom: 30px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+    .card h3 { margin: 10px 0; }
+    .price { color: green; font-size: 20px; margin-bottom: 10px; }
+    .card button { background: #111; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+    .about { padding: 50px 20px; background: white; text-align: center; }
+    .contact { padding: 40px 20px; text-align: center; }
+    .contact input, .contact textarea { width: 80%; max-width: 500px; padding: 10px; margin: 10px 0; }
+    .contact button { padding: 12px 25px; background: #111; color: white; border: none; }
+    footer { background: #111; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luxe Bags</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h2>Luxury Bags for Every Style</h2>
+      <p>Discover premium handbags, backpacks, and travel bags.</p>
+      <button onclick="document.getElementById('products').scrollIntoView();">Shop Now</button>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <h2>Featured Bags</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Handbag">
+        <h3>Elegant Handbag</h3>
+        <p class="price">$79</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=600&q=80" alt="Backpack">
+        <h3>Classic Backpack</h3>
+        <p class="price">$65</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Travel Bag">
+        <h3>Travel Duffel</h3>
+        <p class="price">$120</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Designer Bag">
+        <h3>Designer Tote</h3>
+        <p class="price">$99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Luxe Bags</h2>
+    <p>We specialize in stylish, durable, and affordable bags for work, travel, and fashion. Our mission is to combine elegance with everyday practicality.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="5" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Luxe Bags. All rights reserved.</p>
+  </footer>
+</body>
+</html>
